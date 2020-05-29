@@ -77,6 +77,40 @@ Since I don’t have a frontend, I will be using a rest client for sending the A
 
 We send a post request which contains the data. We parse the data using body-parser and pass it to the variables, then we create a new instance of the detail model we created and saves it to DB using the ``collection.save`` method. Then the response is returned.
 
+![Annotation 2020-05-29 123226](https://user-images.githubusercontent.com/32011625/83231416-16115100-a1a9-11ea-90de-227061b70ee4.jpg)
+
+We can use MongoDB Compass to view the data in the DB. For connecting compass to DB we used the connection string ```mongodb://localhost:27017```
+
+![db](https://user-images.githubusercontent.com/32011625/83231804-bb2c2980-a1a9-11ea-8f5d-9ee395b606ec.jpg)
+
+### Reading user details
+
+We pass in the object id of the user in the request and fetches the user with the corresponding object id. If there is a user with the object is we passed we will get the user as the response.
+
+![Annotation 2020-05-29 124417](https://user-images.githubusercontent.com/32011625/83232072-2970ec00-a1aa-11ea-9182-29dc6ababf19.jpg)
+
+### Updating a User
+
+For updating the user we will use the object id of the user. We pass the object id of the user as a parameter of the request.
+
+![ins](https://user-images.githubusercontent.com/32011625/83232660-2296a900-a1ab-11ea-8ac4-0f393df688b9.jpg)
+
+If we look at MongoDB compass we can view the updated data.
+
+![db](https://user-images.githubusercontent.com/32011625/83232681-29bdb700-a1ab-11ea-9439-883b01b168e8.jpg)
+
+### Deleting a User
+
+We pass the id of the user we want to delete in the request. if there is a user with object id we’ve passed, the user will be deleted from the DB and you will get the response as ‘Record deleted’.
+
+![del](https://user-images.githubusercontent.com/32011625/83232950-99cc3d00-a1ab-11ea-9f4b-7a881a29af3c.jpg)
+
+
+
+
+
+
+
 
 
 
